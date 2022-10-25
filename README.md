@@ -6,34 +6,34 @@ To exit the protection move your Mouse to the Bottom Right then Top Left!
 
 Linux:
 
-  Clone the Repo
+    Clone the Repo
   
-  ```git clone ```
+    ```git clone ```
   
-  CD into the Repo
+    CD into the Repo
   
-  ```cd AFK-Security-Guard```
+    ```cd AFK-Security-Guard```
   
-  Install the Requirements
+    Install the Requirements
   
-  ```pip install -r requirements.txt```
+    ```pip install -r requirements.txt```
   
-  Add your Webhook to WEBHOOK-HERE in line 13 (for notifications)
+    Add your Webhook to WEBHOOK-HERE in line 13 (for notifications)
   
-  Then when you go AFK run
+    Then when you go AFK run
   
-  ```python3 guard.pyw```
+    ```python3 guard.pyw```
   
   _____________________________________________________________________________________________________
   
   Windows:
 
-   Download the Repo
+    Download the Repo
     
-   Install the Requirements
+    Install the Requirements
     
-    ```pip install -r requirements.txt```
+      ```pip install -r requirements.txt```
    
-   Double-Click on the guard.pyw or run (Recommend Double-Click for Daemon Security Guard)
+    Double-Click on the guard.pyw or run (Recommend Double-Click for Daemon Security Guard)
    
-    ```python guard.pyw```
+      ```python guard.pyw```

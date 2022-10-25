@@ -14,12 +14,26 @@ Linux:
   
   ```cd AFK-Security-Guard```
   
-  Add your Webhook to WEBHOOK-HERE (for notifications)
+  Install the Requirements
+  
+  ```pip install -r requirements.txt```
+  
+  Add your Webhook to WEBHOOK-HERE in line 13 (for notifications)
   
   Then when you go AFK run
   
-  ```python3 guard.py```
+  ```python3 guard.pyw```
   
   _____________________________________________________________________________________________________
   
   Windows:
+
+   Download the Repo
+    
+   Install the Requirements
+    
+    ```pip install -r requirements.txt```
+   
+   Double-Click on the guard.pyw or run (Recommend Double-Click for Daemon Security Guard)
+   
+    ```python guard.pyw```

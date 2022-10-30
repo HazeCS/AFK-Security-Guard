@@ -1,4 +1,4 @@
-import pyautogui, time, argparse
+import pyautogui, time, argparse, platform
 from discord_webhook import DiscordWebhook
 from random import *
 from pynput.keyboard import Key, Listener
@@ -30,7 +30,7 @@ sl = wr - wr
 st = hr - hr
 sb = hr - 1
 
-whook = "WEBHOOK-HERE"
+whook = "https://discordapp.com/api/webhooks/1034281360745037895/mmA6oViyhZK8St7yIRWAL7gVX0xSfxYPmcdjoDQe-xSLyv-9eoZevkjYpL-8vJtbx2vj"
 
 clf = open("log.txt", "w")
 clf.write('')
@@ -49,152 +49,86 @@ def fNoti(key):
 	webhook = DiscordWebhook(url=whook, content=f'```ini\n[ BHU Security Guard ]\n  Security Guard Started |    \nSecret Mouse Position Key is {key}!```')
 	webhook.execute()
 
+def key(fw, fh, sw, sh):
+	w, h = pyautogui.position()
+	if w == fw and h == fh:
+		time.sleep(1)
+		w, h = pyautogui.position()
+		if w == sw and h == sh:
+			exitn()
+		else:
+			pass
+
+if platform.system() == 'Windows':
+	def msg():
+		print('Starting in 5 seconds... Make sure to hide the console!')
+
+if platform.system() == 'Linux':
+	def msg():
+		print('Starting in 5 seconds... Make sure to hide the terminal!')
+
 if args.brtl:
 	fNoti('Bottom Right to Top Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == st:
-				exitn()
-			else:
-				pass
+		key(sr, sb, sl, st)
 			
 if args.brtr:
 	fNoti('Bottom Right to Top Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == st:
-				exitn()
-			else:
-				pass
+		key(sr, sb, sr, st)
 
 if args.bltl:
 	fNoti('Bottom Left to Top Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == st:
-				exitn()
-			else:
-				pass
+		key(sl, sb, sl, st)
 			
 if args.bltr:
 	fNoti('Bottom Left to Top Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == st:
-				exitn()
-			else:
-				pass
+		key(sl, sb, sr, st)
 			
 if args.brbl:
 	fNoti('Bottom Right to Bottom Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == sb:
-				exitn()
-			else:
-				pass
+		key(sr, sb, sl, sb)
 			
 if args.blbr:
 	fNoti('Bottom Left to Bottom Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == sb:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == sb:
-				exitn()
-			else:
-				pass
+		key(sl, sb, sr, sb)
 			
 if args.trtl:
 	fNoti('Top Right to Top Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == st:
-				exitn()
-			else:
-				pass
+		key(sr, st, sl, st)
 			
 if args.tltr:
 	fNoti('Top Left to Top Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == st:
-				exitn()
-			else:
-					pass
+		key(sl, st, sr, st)
 
 if args.trbl:
 	fNoti('Top Right to Bottom Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == sb:
-				exitn()
-			else:
-				pass
+		key(sr, st, sl, sb)
 
 if args.trbr:
 	fNoti('Top Right to Bottom Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sr and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == sb:
-				exitn()
-			else:
-				pass
+		key(sr, st, sr, sb)
 
 if args.tlbl:
 	fNoti('Top Left to Bottom Left')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sl and h == sb:
-				exitn()
-			else:
-				pass
+		key(sl, st, sl, sb)
 
 if args.tlbr:
 	fNoti('Top Left to Bottom Right')
 	def checkKey():
-		w, h = pyautogui.position()
-		if w == sl and h == st:
-			time.sleep(1)
-			w, h = pyautogui.position()
-			if w == sr and h == sb:
-				exitn()
-			else:
-				pass
+		key(sl, st, sr, sb)
 
 class Main:
-	print('Starting in 5 seconds... Make sure to hide the terminal/console!')
+	msg()
 	time.sleep(5)
 	while True:
 		w, h = pyautogui.position()

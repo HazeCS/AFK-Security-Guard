@@ -46,7 +46,7 @@ def exitn():
 	exit()
 
 def fNoti(key):
-	webhook = DiscordWebhook(url=whook, content=f'```ini\n[ BHU Security Guard ]\n  Security Guard Started |    Secret Mouse Position Key is {key}!```')
+	webhook = DiscordWebhook(url=whook, content=f'```ini\n[ BHU Security Guard ]\n  Security Guard Started |    \nSecret Mouse Position Key is {key}!```')
 	webhook.execute()
 
 if args.brtl:

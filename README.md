@@ -22,7 +22,7 @@ Linux:
   
    Then when you go AFK run
   
-    python3 guard.pyw
+    python3 guard.py
   
   _____________________________________________________________________________________________________
   
@@ -34,6 +34,6 @@ Linux:
     
       pip install -r requirements.txt
    
-   Double-Click on the guard.pyw or run (Recommend Double-Click for Daemon Security Guard)
+   Double-Click on the guard.pyw or run this in the console
    
       python guard.pyw

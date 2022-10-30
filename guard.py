@@ -30,7 +30,7 @@ sl = wr - wr
 st = hr - hr
 sb = hr - 1
 
-whook = "https://discordapp.com/api/webhooks/1034281360745037895/mmA6oViyhZK8St7yIRWAL7gVX0xSfxYPmcdjoDQe-xSLyv-9eoZevkjYpL-8vJtbx2vj"
+whook = "WEBHOOK-HERE"
 
 clf = open("log.txt", "w")
 clf.write('')
